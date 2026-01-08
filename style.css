@@ -1,0 +1,347 @@
+/* ====== BODY BLUE THEME ====== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #e0f2fe, #bfdbfe, #93c5fd);
+    min-height: 100vh;
+}
+
+
+/* ====== WRAPPER UTAMA ====== */
+.container {
+    max-width: 960px;
+    margin: 40px auto;
+    background: #e0f2fe;           /* biru muda lembut */
+    border-radius: 22px;
+    padding: 28px 34px 36px;
+    box-shadow: 0 20px 45px rgba(30, 64, 175, 0.25);
+    border: 1px solid rgba(147, 197, 253, 0.6);
+}
+
+
+
+/* ====== HEADER / BRAND ====== */
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8, #1e40af);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #f0f9ff;
+    font-size: 22px;
+    box-shadow: 0 12px 28px rgba(29, 78, 216, 0.5);
+}
+
+.brand-text h1 {
+    margin: 0;
+    font-size: 22px;
+    color: #1e3a8a;
+    letter-spacing: 0.03em;
+}
+
+.brand-text span {
+    font-size: 13px;
+    color: #7887b7;
+}
+
+
+/* ====== NAV ====== */
+.nav-links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    color: #1e3a8a;
+    background: rgba(219, 234, 254, 0.9);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    background: #bfdbfe;
+    border-color: #2563eb;
+}
+
+
+/* ====== TEXT UMUM ====== */
+h1, h2, h3 {
+    color: #7c2d12;
+    margin-top: 0;
+}
+
+p {
+    color: #9a3412;
+    font-size: 14px;
+}
+
+/* ====== CARD SECTION (UTAMA) ====== */
+.main-section {
+    margin-top: 12px;
+}
+
+.menu-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background: #fffbeb;
+    border: 1px solid #fed7aa;
+    color: #7c2d12;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-list li a::before {
+    content: "🍽️";
+}
+
+.menu-list li a[href*="transaksi"]::before {
+    content: "🧾";
+}
+
+.menu-list li a:hover {
+    background: #fed7aa;
+}
+
+/* ====== TABEL (untuk products.php & transaksi) ====== */
+.table-wrapper {
+    margin-top: 16px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+    font-size: 13px;
+    background: #fffbeb;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #fed7aa;
+    text-align: left;
+}
+
+th {
+    background: #fed7aa;
+    color: #7c2d12;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+tr:nth-child(even) td {
+    background: #fff7ed;
+}
+
+tr:hover td {
+    background: #fee2e2;
+}
+
+/* ====== FORM (input produk & qty) ====== */
+form .form-group {
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #9a3412;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 7px 9px;
+    border-radius: 10px;
+    border: 1px solid #fed7aa;
+    background: #fffbeb;
+    font-size: 13px;
+    color: #7c2d12;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #f97316;
+    box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.4);
+}
+
+/* ====== BUTTONS ====== */
+button,
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    gap: 6px;
+    transition: transform 0.08s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.btn-primary,
+button[type="submit"] {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: #fff7ed;
+    box-shadow: 0 10px 22px rgba(248, 113, 22, 0.55);
+}
+
+.btn-primary:hover,
+button[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(248, 113, 22, 0.75);
+}
+
+.btn-secondary {
+    background: #fffbeb;
+    color: #7c2d12;
+    border: 1px solid #fed7aa;
+}
+
+.btn-secondary:hover {
+    background: #fed7aa;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+    color: #fee2e2;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 640px) {
+    .container {
+        margin: 20px 12px;
+        padding: 18px 18px 24px;
+    }
+
+    .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+/* ====== MODAL ADD CUSTOMER ====== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    display: none;              /* default: tidak kelihatan */
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-box {
+    width: 460px;
+    max-width: 92%;
+    background: #f9fafb;
+    border-radius: 6px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.6);
+    overflow: hidden;
+    border: 1px solid #d1d5db;
+}
+
+/* header biru */
+.modal-header {
+    background: #1d4ed8;
+    color: #eff6ff;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.modal-header .close-btn {
+    border: none;
+    background: transparent;
+    color: #eff6ff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* isi modal */
+.modal-body {
+    padding: 14px 16px 4px;
+    background: #ffffff;
+}
+
+.modal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 14px;
+}
+
+.modal-footer {
+    padding: 10px 16px 12px;
+    background: #e5e7eb;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* sesuaikan style input di dalam modal */
+.modal-body .form-group label {
+    font-size: 12px;
+    color: #374151;
+}
+
+.modal-body .form-group input {
+    background: #f9fafb;
+    border-radius: 4px;
+    border: 1px solid #d1d5db;
+    padding: 6px 8px;
+    font-size: 13px;
+    color: #111827;
+}
+
+.modal-body .form-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
+}
