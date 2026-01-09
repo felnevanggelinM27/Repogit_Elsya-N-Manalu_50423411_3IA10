@@ -1,57 +1,75 @@
 <?php
-// index.php - beranda
+require 'auth.php'; // proteksi halaman (wajib login)
 ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Kasir by Elsya</title>
-    <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasir by Elsya</title>
 
-<!-- STYLE  -->
-<link rel="stylesheet" href="style.css">
+  <!-- BOOTSTRAP -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
 
+  <!-- STYLE -->
+  <!-- pakai versioning biar CSS ga ke-cache -->
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 <body>
-<div class="container mt-5 p-4 shadow rounded bg-light">
+  <div class="container mt-5 p-4 shadow rounded bg-light">
 
+    <!-- HEADER -->
+    <header class="app-header d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
 
-    <!-- Header / Brand -->
-    <header class="app-header">
-        <div class="brand">
-            <div class="brand-logo">KE</div>
-            <div class="brand-text">
-                <h1>Kasir by Elsya</h1>
-                <span>Sistem kasir makanan & minuman</span>
-            </div>
+      <!-- BRAND -->
+      <div class="brand d-flex align-items-center gap-3">
+        <div class="brand-logo">KE</div>
+
+        <div class="brand-text">
+          <h1 class="m-0">Kasir by Elsya</h1>
+          <span>Sistem kasir makanan & minuman</span>
         </div>
+      </div>
 
-        <nav class="nav-links">
-            <a href="products.php" class="btn btn-primary">Kelola Menu</a>
-            <a href="transaksibaru.php" class="btn btn-success">Transaksi Baru</a>
-            <a href="saleshistory.php" class="btn btn-info">Riwayat Penjualan</a>
-    
-        </nav>
+      <!-- NAVIGATION (BUTTON) -->
+      <div class="nav-actions">
+        <a href="products.php" class="nav-btn">Kelola Menu</a>
+        <a href="transaksibaru.php" class="nav-btn">Transaksi Baru</a>
+        <a href="saleshistory.php" class="nav-btn">Riwayat Pemesanan</a>
+
+        <a href="logout.php"
+           class="nav-btn nav-btn-logout"
+           onclick="return confirm('Yakin ingin logout?')">
+          Logout
+        </a>
+      </div>
+
     </header>
 
-    <!-- Content -->
-    <section class="main-section">
-        <h2 style="color:#1e3a8a; font-size:26px;">WELCOME</h2>
-        <p style="font-size:14px; color:#1e40af;">
-            Selamat datang di <b>Kasir by Elsya</b>.  
-            Gunakan aplikasi ini untuk mengelola menu makanan & minuman, 
-            serta mencatat transaksi pelanggan dengan cepat.
-        </p>
+    <!-- CONTENT -->
+    <section class="main-section mt-4">
+      <h2 style="color:#1e3a8a; font-size:26px;">WELCOME</h2>
 
-        <ul class="menu-list">
-            <li><a href="products.php">Kelola menu makanan & minuman</a></li>
-            <li><a href="transaksibaru.php">Mulai transaksi kasir (pilih menu & hitung total)</a></li>
-            <li><a href="saleshistory.php">Riwayat penjualan (lihat struk)</a></li>
-        </ul>
+      <p style="font-size:14px; color:#1e40af;">
+        Selamat datang di <b>Kasir by Elsya</b>.
+        Aplikasi ini digunakan untuk mengelola menu makanan & minuman,
+        serta mencatat transaksi pelanggan dengan cepat.
+      </p>
+
+      <ul class="menu-list">
+        <li><a href="products.php">Kelola menu makanan & minuman</a></li>
+        <li><a href="transaksibaru.php">Mulai transaksi kasir (pilih menu & hitung total)</a></li>
+        <li><a href="saleshistory.php">Riwayat penjualan (lihat struk)</a></li>
+      </ul>
     </section>
 
-</div>
+  </div>
+
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
