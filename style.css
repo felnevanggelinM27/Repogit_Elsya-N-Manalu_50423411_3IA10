@@ -62,6 +62,12 @@ body {
     color: #7887b7;
 }
 
+.app-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
 
 /* ====== NAV ====== */
 .nav-links {
@@ -344,4 +350,64 @@ button[type="submit"]:hover {
     outline: none;
     border-color: #2563eb;
     box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
+}
+
+/* ===============================
+   FORCE NAV JADI BUTTON
+   (OVERRIDE BOOTSTRAP)
+================================ */
+
+.nav-actions{
+  display: flex !important;
+  gap: 10px !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+}
+
+/* tombol utama */
+.nav-actions a.nav-btn{
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 10px 16px !important;
+  border-radius: 999px !important;
+
+  background-color: #eef2ff !important;
+  border: 1px solid #c7d2fe !important;
+
+  color: #1e3a8a !important;
+  text-decoration: none !important;
+
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+
+  cursor: pointer !important;
+}
+
+/* hover */
+.nav-actions a.nav-btn:hover{
+  background-color: #dbeafe !important;
+  box-shadow: 0 8px 18px rgba(30, 58, 138, 0.15) !important;
+  transform: translateY(-1px);
+}
+
+/* logout khusus */ 
+.nav-actions a.nav-btn-logout{
+  background-color: #fee2e2 !important;
+  border-color: #fecaca !important;
+  color: #991b1b !important;
+}
+
+.nav-actions a.nav-btn-logout:hover{
+  background-color: #fecaca !important;
+  box-shadow: 0 8px 18px rgba(153, 27, 27, 0.15) !important;
+}
+
+/* mobile */
+@media (max-width: 576px){
+  .nav-actions{
+    justify-content: flex-start !important;
+  }
 }
